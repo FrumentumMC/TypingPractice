@@ -3,3 +3,4 @@
 - Accuracy in 10.00%
 - keyboardwarrior.com
 - https://agilefingers.com/lessons/javascript
+- https://github.com/kaizhelam/Typing-Speed-Game
