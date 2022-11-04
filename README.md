@@ -1,6 +1,5 @@
-- 20 words per round
-- 30 min per day in 10%
-- Accuracy in 10.00%
-- keyboardwarrior.com
+- Timer 1:00
+- Accuracy 00.00%
+- wpm 00
 - https://agilefingers.com/lessons/javascript
 - https://github.com/kaizhelam/Typing-Speed-Game
