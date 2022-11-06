@@ -6,15 +6,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>KeyboardWarrior</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
         <link rel="icon" type="image/x-icon" href="images/favicon.png">
     </head>
 
     <body>
 
         <header>
+            <a id="home" href="index.html"><h1>KeyboardWarrior</h1></a>
+            <nav>
+                <a href="">Lorem</a>
+                <a href="">Lorem</a>
+                <a href="">Lorem</a>
+            </nav>
         </header>
 
         <main>
+            <div id="typing-area">
+                <div id="performance-details">
+                    <p>Mistakes: <span id="mistakes">0</span></p>
+                    <time>1:00</time>
+                </div>
+                <p id="text-generator">API random text generator to be displayed.</p>
+                <textarea id="text-input" rows="3" placeholder="Start typing here..."></textarea>
+                <button id="retry">Retry</button>
+                <div id="result-details">
+                    <h2>Result</h2>
+                    <div>
+                        <p>Accuracy: <span id="accuracy">95.00%</span></p> <!-- % -->
+                        <p>WPM: <span id="wpm">40</span></p> <!-- wpm 40 just to showcase -->
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer>
