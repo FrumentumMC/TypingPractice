@@ -1,11 +1,10 @@
-/* General styles */
 * {box-sizing: border-box;}
 
 body {
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
-    background-color: #9cbba8;
+    background: linear-gradient(#677c70, #b3d6c1);
 }
 
 header {
@@ -41,13 +40,10 @@ textarea {
 
 footer {
     margin-top: 300px;
-    padding: 100px;
+    padding: 200px;
     background-color: #181818;
 }
 
-/* Classes */
-
-/* ID's */
 #home {
     padding: 0 20px;
     text-decoration: none;
@@ -85,6 +81,7 @@ footer {
 }
 
 #result-details {
+    display: none;
     padding-top: 60px;
     text-align: center;
 }
@@ -98,5 +95,3 @@ footer {
     font-weight: bold;
     font-size: 1.5em;
 }
-
-/* Media queries */

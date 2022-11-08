@@ -13,7 +13,7 @@
     <body>
 
         <header>
-            <a id="home" href="index.html"><h1>KeyboardWarrior</h1></a>
+            <a id="home" href=""><h1>KeyboardWarrior</h1></a>
             <nav>
                 <a href="">Lorem</a>
                 <a href="">Lorem</a>
@@ -25,16 +25,16 @@
             <div id="typing-area">
                 <div id="performance-details">
                     <p>Mistakes: <span id="mistakes">0</span></p>
-                    <time>1:00</time>
+                    <time id="timer"></time>
                 </div>
-                <p id="text-generator">API random text generator to be displayed.</p>
+                <p id="text-generator"></p>
                 <textarea id="text-input" rows="3" placeholder="Start typing here..."></textarea>
-                <button id="retry">Retry</button>
+                <button id="retry" onclick="resetGame()">Retry</button>
                 <div id="result-details">
                     <h2>Result</h2>
                     <div>
-                        <p>Accuracy: <span id="accuracy">95.00%</span></p> <!-- % -->
-                        <p>WPM: <span id="wpm">40</span></p> <!-- wpm 40 just to showcase -->
+                        <p>Accuracy: <span id="accuracy"></span></p>
+                        <p>WPM: <span id="wpm"></span></p>
                     </div>
                 </div>
             </div>
