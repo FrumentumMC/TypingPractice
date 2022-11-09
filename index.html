@@ -15,9 +15,10 @@
         <header>
             <a id="home" href=""><h1>KeyboardWarrior</h1></a>
             <nav>
-                <a href="">Lorem</a>
-                <a href="">Lorem</a>
-                <a href="">Lorem</a>
+                <a href="">How to play</a>
+                <a href="">Leaderboard</a>
+                <a href="">Forums</a>
+                <a href="">FAQ</a>
             </nav>
         </header>
 
@@ -32,9 +33,89 @@
                 <button id="retry" onclick="resetGame()">Retry</button>
                 <div id="result-details">
                     <h2>Result</h2>
+                    <hr>
                     <div>
                         <p>Accuracy: <span id="accuracy"></span></p>
                         <p>WPM: <span id="wpm"></span></p>
+                    </div>
+                    <details>
+                        <summary>More details</summary>
+                        <p>Details...</p>
+                    </details>
+                </div>
+            </div>
+
+            <div id="keyboard-area">
+                <div id="keyboard-box">
+                    <div id="keyboard-frame">
+                        <div class="keyboard-rows">
+                            <span class="key">`</span>
+                            <span class="key">1</span>
+                            <span class="key">2</span>
+                            <span class="key">3</span>
+                            <span class="key">4</span>
+                            <span class="key">5</span>
+                            <span class="key">6</span>
+                            <span class="key">7</span>
+                            <span class="key">8</span>
+                            <span class="key">9</span>
+                            <span class="key">0</span>
+                            <span class="key">-</span>
+                            <span class="key">=</span>
+                            <span class="key side-key" id="backspace">Backspace</span>
+                        </div>
+                        <div class="keyboard-rows">
+                            <span class="key side-key" id="tab">Tab</span>
+                            <span class="key">Q</span>
+                            <span class="key">W</span>
+                            <span class="key">E</span>
+                            <span class="key">R</span>
+                            <span class="key">T</span>
+                            <span class="key">Y</span>
+                            <span class="key">U</span>
+                            <span class="key">I</span>
+                            <span class="key">O</span>
+                            <span class="key">P</span>
+                            <span class="key">[</span>
+                            <span class="key">]</span>
+                            <span class="key" id="backslash">\</span>
+                        </div>
+                        <div class="keyboard-rows">
+                            <span class="key side-key" id="caps-lock">Caps Lock</span> <!-- Caps lock is broken lol -->
+                            <span class="key">A</span>
+                            <span class="key">S</span>
+                            <span class="key">D</span>
+                            <span class="key key-bumps-display">F<div class="key-bumps"></div></span>
+                            <span class="key">G</span>
+                            <span class="key">H</span>
+                            <span class="key key-bumps-display">J<div class="key-bumps"></div></span>
+                            <span class="key">K</span>
+                            <span class="key">L</span>
+                            <span class="key">;</span>
+                            <span class="key">'</span>
+                            <span class="key side-key" id="enter">Enter</span>
+                        </div>
+                        <div class="keyboard-rows">
+                            <span class="key side-key" id="shift-left">Shift</span>
+                            <span class="key">Z</span>
+                            <span class="key">X</span>
+                            <span class="key">C</span>
+                            <span class="key">V</span>
+                            <span class="key">B</span>
+                            <span class="key">N</span>
+                            <span class="key">M</span>
+                            <span class="key">,</span>
+                            <span class="key">.</span>
+                            <span class="key">/</span>
+                            <span class="key side-key" id="shift-right">Shift</span>
+                        </div>
+                        <div class="keyboard-rows">
+                            <span class="key side-key" id="ctrl-left">Ctrl</span>
+                            <span class="key side-key" id="alt-left">Alt</span>
+                            <span class="key" id="space"></span>
+                            <span class="key side-key" id="alt-right">Alt</span>
+                            <span class="key side-key" id="ctrl-right">Ctrl</span>
+                        </div>
                     </div>
                 </div>
             </div>

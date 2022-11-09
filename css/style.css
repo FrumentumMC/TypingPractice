@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
 * {box-sizing: border-box;}
 
 body {
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
-    background: linear-gradient(#677c70, #b3d6c1);
+    background: linear-gradient(#748b7e, #b3d6c1);
 }
 
 header {
     display: flex;
     align-items: center;
     background-color: #181818;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 nav {margin-left: 10px;}
@@ -25,7 +28,7 @@ nav a {
 nav a:hover {color: #f2f2f2;}
 
 main {
-    display: flex;
+    display: grid;
     justify-content: center;
 }
 
@@ -39,25 +42,55 @@ textarea {
 }
 
 footer {
-    margin-top: 300px;
-    padding: 200px;
+    display: flex;
+    padding: 100px;
     background-color: #181818;
+}
+
+.keyboard-rows {display: flex;}
+
+.key {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin: 1px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+.side-key {background-color: #bbbbbb;}
+
+.key-bumps-display {
+    display: grid;
+    padding: 15px;
+}
+
+.key-bumps {
+    width: 7px;
+    height: 1px;
+    background-color: #444444;
+}
+
+.active-keys {
+    color: #f2f2f2;
+    background-color: #444444;
 }
 
 #home {
     padding: 0 20px;
     text-decoration: none;
-    color: #181818;
-    background-color: #af4444;
+    color: #f2f2f2;
+    background: linear-gradient(#c95757, #753131);
+    text-shadow: 2px 2px 4px #000000;
     font-family: sans-serif;
 }
-
-#home:hover {color: #9cbba8;}
 
 #typing-area {
     width: 800px;
     padding: 20px;
     background-color: #f2f2f2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #performance-details {
@@ -69,7 +102,10 @@ footer {
 
 #performance-details span {font-weight: bold;}
 
-#text-generator {padding: 50px 0 10px;}
+#text-generator {
+    padding: 50px 0 10px;
+    font-weight: bold;
+}
 
 #retry {
     float: right;
@@ -95,3 +131,46 @@ footer {
     font-weight: bold;
     font-size: 1.5em;
 }
+
+#keyboard-area {
+    padding: 0 23px 0;
+    margin: 100px 0 100px;
+    font-family: "Lato", sans-serif;
+}
+
+#keyboard-box {
+    width: 750px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 3%;
+    background-color: #dddddd;
+}
+
+#keyboard-frame {
+    background-color: #181818;
+    border: solid #181818;
+}
+
+#backspace {width: 100px;}
+
+#tab {width: 75px;}
+
+#backslash {width: 75px;}
+
+#caps-lock {width: 86px;}
+
+#enter {width: 116px;}
+
+#shift-left {width: 112px;}
+
+#shift-right {width: 142px;}
+
+#ctrl-left {width: 75px;}
+
+#alt-left {width: 75px;}
+
+#space {width: 468px;}
+
+#alt-right {width: 75px;}
+
+#ctrl-right {width: 75px;}
