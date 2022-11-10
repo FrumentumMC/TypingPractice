@@ -77,6 +77,16 @@ footer {
     background-color: #444444;
 }
 
+.success {
+    color: #00ff00;
+    text-shadow: 0.5px 0.5px 1px #000000;
+}
+
+.fail {
+    background-color: #e74949;
+    text-shadow: 0.5px 0.5px 1px #000000;
+}
+
 #home {
     padding: 0 20px;
     text-decoration: none;
