@@ -43,6 +43,7 @@ userInput.addEventListener("input", () => {
     textChars.forEach((char, index) => {
         if (char.innerText == userInputChars[index]) {
             char.classList.add("success");
+            userInput.style.backgroundColor = "#ffffff";
         }
         else if (userInputChars[index] == null) {
             if (char.classList.contains("success")) {
@@ -52,9 +53,10 @@ userInput.addEventListener("input", () => {
             }
         }
         else {
-            if (!char.classList.contains("fail")) {
+            if (!char.classList.contains("fail")) { // fix do not forgive mistakes.. and side arrpws disable lol
                 mistakes += 1;
                 char.classList.add("fail");
+                userInput.style.backgroundColor = "#cc7070";
             }
             document.getElementById("mistakes").innerText = mistakes;
         }
@@ -72,24 +74,18 @@ userInput.addEventListener("input", () => {
 function resetGame() {
     textSection.innerHTML = "";
     userInput.value = "";
-    userInput.enable = true;
+    userInput.disabled = false;
     getText();
     // stop timer
     document.getElementById("result-details").style.display = "none";
 }
 
-let time = 60;
-
 function getResults() {
     clearInterval(timer);
     userInput.value = "";
     userInput.disabled = true;
-    let timeTaken = 1;
-    if (time != 0) {
-        timeTaken = (60 - time) / 100;
-    }
-    document.getElementById("accuracy").innerText = Math.round(((userInput.value.length - mistakes) / userInput.value.length) * 100) + "%";
-    document.getElementById("wpm").innerText = (userInput.value.length / 5 / timeTaken).toFixed(2);
+    // wpm
+    // accuracy
     document.getElementById("result-details").style.display = "block";
 }
 
@@ -100,7 +96,7 @@ let ctrl_left = document.querySelector("#ctrl-left");
 let alt_left = document.querySelector("#alt-left");
 let space = document.querySelector("#space");
 let alt_right = document.querySelector("#alt-right");
-let ctrl_right = document.querySelector("#ctrl-right");
+let ctrl_right = document.querySelector("#ctrl-right"); // add caps lock <span class="key">`</span>
 
 for (let i = 0; i < keys.length; i++) {
     keys[i].setAttribute("keyname", keys[i].innerText);

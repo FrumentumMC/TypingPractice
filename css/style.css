@@ -78,14 +78,11 @@ footer {
 }
 
 .success {
-    color: #00ff00;
-    text-shadow: 0.5px 0.5px 1px #000000;
+    color: #b1e650;
+    text-decoration-line: underline;
 }
 
-.fail {
-    background-color: #e74949;
-    text-shadow: 0.5px 0.5px 1px #000000;
-}
+.fail {background-color: #cc7070;}
 
 #home {
     padding: 0 20px;
@@ -112,18 +109,34 @@ footer {
 
 #performance-details span {font-weight: bold;}
 
+#text-box {
+    padding: 10px;
+    margin-top: 50px;
+    background-color: #eeeeee;
+    border: solid #bbbbbb;
+    border-radius: 10px;
+}
+
 #text-generator {
-    padding: 50px 0 10px;
+    color: #404040;
+    padding-bottom: 10px;
     font-weight: bold;
 }
 
 #retry {
+    margin-top: 10px;
     float: right;
     border: none;
+    border-radius: 5px;
     font-size: 1.125em;
     padding: 7.5px 15px;
     color: #f2f2f2;
     background-color: #5cda8e;
+}
+
+#retry svg {
+    fill: #f2f2f2;
+    width: 15px;
 }
 
 #result-details {
@@ -144,7 +157,7 @@ footer {
 
 #keyboard-area {
     padding: 0 23px 0;
-    margin: 100px 0 100px;
+    margin: 50px 0 100px;
     font-family: "Lato", sans-serif;
 }
 
@@ -163,9 +176,7 @@ footer {
 
 #backspace {width: 100px;}
 
-#tab {width: 75px;}
-
-#backslash {width: 75px;}
+#tab, #backslash, #ctrl-left, #alt-left, #alt-right, #ctrl-right {width: 75px;}
 
 #caps-lock {width: 86px;}
 
@@ -175,12 +186,4 @@ footer {
 
 #shift-right {width: 142px;}
 
-#ctrl-left {width: 75px;}
-
-#alt-left {width: 75px;}
-
 #space {width: 468px;}
-
-#alt-right {width: 75px;}
-
-#ctrl-right {width: 75px;}
