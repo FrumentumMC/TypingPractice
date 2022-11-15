@@ -84,6 +84,7 @@ function getResults() {
     clearInterval(timer);
     userInput.value = "";
     userInput.disabled = true;
+    userInput.style.backgroundColor = "#ffffff";
     // wpm
     // accuracy
     document.getElementById("result-details").style.display = "block";
