@@ -1,3 +1,11 @@
+function hover(element) {
+    element.setAttribute("src", "images/icon_hover.png");
+}
+
+function unhover(element) {
+    element.setAttribute("src", "images/icon.png");
+}
+
 const textApiUrl = "http://api.quotable.io/random";
 const textSection = document.getElementById("text-generator");
 const userInput = document.getElementById("text-input");

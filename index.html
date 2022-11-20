@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>KeyboardWarrior</title>
+        <title>TypingPractice</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
         <link rel="icon" type="image/x-icon" href="images/favicon.png">
@@ -13,7 +13,10 @@
     <body>
 
         <header>
-            <a id="home" href=""><h1>KeyboardWarrior</h1></a>
+            <a id="home" href="">
+                <img src="images/icon.png" alt="Icon" onmouseover="hover(this);" onmouseout="unhover(this);">
+                <h1>TypingPractice</h1>
+            </a>
             <nav>
                 <a href="">How to play</a>
                 <a href="">How to play</a>
@@ -29,7 +32,7 @@
                     <time id="timer"></time>
                 </div>
                 <div id="text-box">
-                    <p id="text-generator"></p> <!-- onmousedown="return false" onselectstart="return false" -->
+                    <p id="text-generator"></p>
                     <textarea id="text-input" rows="3" placeholder="Start typing here..."></textarea>
                 </div>
                 <button id="retry" onclick="resetGame()">
@@ -48,88 +51,94 @@
                     </div>
                     <details>
                         <summary>More details</summary>
-                        <p>Details...</p>
+                        <p>Details...</p> <!-- Results from each round -->
                     </details>
                 </div>
             </div>
 
-            <div id="keyboard-area">
-                <div id="keyboard-box">
-                    <div id="keyboard-frame">
-                        <div class="keyboard-rows">
-                            <span class="key">`</span>
-                            <span class="key">1</span>
-                            <span class="key">2</span>
-                            <span class="key">3</span>
-                            <span class="key">4</span>
-                            <span class="key">5</span>
-                            <span class="key">6</span>
-                            <span class="key">7</span>
-                            <span class="key">8</span>
-                            <span class="key">9</span>
-                            <span class="key">0</span>
-                            <span class="key">-</span>
-                            <span class="key">=</span>
-                            <span class="key side-key" id="backspace">Backspace</span>
-                        </div>
-                        <div class="keyboard-rows">
-                            <span class="key side-key" id="tab">Tab</span>
-                            <span class="key">Q</span>
-                            <span class="key">W</span>
-                            <span class="key">E</span>
-                            <span class="key">R</span>
-                            <span class="key">T</span>
-                            <span class="key">Y</span>
-                            <span class="key">U</span>
-                            <span class="key">I</span>
-                            <span class="key">O</span>
-                            <span class="key">P</span>
-                            <span class="key">[</span>
-                            <span class="key">]</span>
-                            <span class="key" id="backslash">\</span>
-                        </div>
-                        <div class="keyboard-rows">
-                            <span class="key side-key" id="caps-lock">Caps Lock</span> <!-- Caps lock is broken lol -->
-                            <span class="key">A</span>
-                            <span class="key">S</span>
-                            <span class="key">D</span>
-                            <span class="key key-bumps-display">F<div class="key-bumps"></div></span>
-                            <span class="key">G</span>
-                            <span class="key">H</span>
-                            <span class="key key-bumps-display">J<div class="key-bumps"></div></span>
-                            <span class="key">K</span>
-                            <span class="key">L</span>
-                            <span class="key">;</span>
-                            <span class="key">'</span>
-                            <span class="key side-key" id="enter">Enter</span>
-                        </div>
-                        <div class="keyboard-rows">
-                            <span class="key side-key" id="shift-left">Shift</span>
-                            <span class="key">Z</span>
-                            <span class="key">X</span>
-                            <span class="key">C</span>
-                            <span class="key">V</span>
-                            <span class="key">B</span>
-                            <span class="key">N</span>
-                            <span class="key">M</span>
-                            <span class="key">,</span>
-                            <span class="key">.</span>
-                            <span class="key">/</span>
-                            <span class="key side-key" id="shift-right">Shift</span>
-                        </div>
-                        <div class="keyboard-rows">
-                            <span class="key side-key" id="ctrl-left">Ctrl</span>
-                            <span class="key side-key" id="alt-left">Alt</span>
-                            <span class="key" id="space"></span>
-                            <span class="key side-key" id="alt-right">Alt</span>
-                            <span class="key side-key" id="ctrl-right">Ctrl</span>
-                        </div>
+            <div id="keyboard-box">
+                <div id="keyboard-frame">
+                    <div class="keyboard-rows">
+                        <span class="key light-theme">`</span> <!-- not working yeet -->
+                        <span class="key light-theme">1</span>
+                        <span class="key dark-theme">2</span>
+                        <span class="key light-theme">3</span>
+                        <span class="key dark-theme">4</span>
+                        <span class="key dark-theme">5</span>
+                        <span class="key light-theme">6</span>
+                        <span class="key light-theme">7</span>
+                        <span class="key dark-theme">8</span>
+                        <span class="key light-theme">9</span>
+                        <span class="key dark-theme">0</span>
+                        <span class="key dark-theme">-</span>
+                        <span class="key dark-theme">=</span>
+                        <span class="key" id="backspace">Backspace</span>
+                    </div>
+                    <div class="keyboard-rows">
+                        <span class="key" id="tab">Tab</span>
+                        <span class="key light-theme">Q</span>
+                        <span class="key dark-theme">W</span>
+                        <span class="key light-theme">E</span>
+                        <span class="key dark-theme">R</span>
+                        <span class="key dark-theme">T</span>
+                        <span class="key light-theme">Y</span>
+                        <span class="key light-theme">U</span>
+                        <span class="key dark-theme">I</span>
+                        <span class="key light-theme">O</span>
+                        <span class="key dark-theme">P</span>
+                        <span class="key dark-theme">[</span>
+                        <span class="key dark-theme">]</span>
+                        <span class="key dark-theme" id="backslash">\</span>
+                    </div>
+                    <div class="keyboard-rows">
+                        <span class="key" id="caps-lock">Caps Lock</span> <!-- Caps lock is broken lol -->
+                        <span class="key light-theme">A</span>
+                        <span class="key dark-theme">S</span>
+                        <span class="key light-theme">D</span>
+                        <span class="key dark-theme key-bumps-display">F<div class="key-bumps"></div></span>
+                        <span class="key dark-theme">G</span>
+                        <span class="key light-theme">H</span>
+                        <span class="key light-theme key-bumps-display">J<div class="key-bumps"></div></span>
+                        <span class="key dark-theme">K</span>
+                        <span class="key light-theme">L</span>
+                        <span class="key dark-theme">;</span>
+                        <span class="key dark-theme">'</span>
+                        <span class="key" id="enter">Enter</span>
+                    </div>
+                    <div class="keyboard-rows">
+                        <span class="key" id="shift-left">Shift</span>
+                        <span class="key light-theme">Z</span>
+                        <span class="key dark-theme">X</span>
+                        <span class="key light-theme">C</span>
+                        <span class="key dark-theme">V</span>
+                        <span class="key dark-theme">B</span>
+                        <span class="key light-theme">N</span>
+                        <span class="key light-theme">M</span>
+                        <span class="key dark-theme">,</span>
+                        <span class="key light-theme">.</span>
+                        <span class="key dark-theme">/</span>
+                        <span class="key" id="shift-right">Shift</span>
+                    </div>
+                    <div class="keyboard-rows">
+                        <span class="key" id="ctrl-left">Ctrl</span> <!-- not working yeet -->
+                        <span class="key" id="alt-left">Alt</span>
+                        <span class="key" id="space"></span>
+                        <span class="key" id="alt-right">Alt</span>
+                        <span class="key" id="ctrl-right">Ctrl</span> <!-- not working yeet -->
                     </div>
                 </div>
             </div>
         </main>
 
         <footer>
+            <hr>
+            <section>
+                <a href="">How to play</a>
+                <a href="">How to play</a>
+                <a href="">How to play</a>
+                <a href="">How to play</a>
+                <a href="">How to play</a>
+            </section>
         </footer>
 
         <script src="javascript/script.js"></script>
