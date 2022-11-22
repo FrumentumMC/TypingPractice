@@ -1,6 +1,1 @@
-- https://codingartistweb.com/2021/11/typing-test-with-html-css-javascript/
-- https://www.geeksforgeeks.org/design-a-typing-speed-test-game-using-javascript/
-- https://github.com/lukePeavey/quotable
-- https://www.w3schools.com/html/html5_semantic_elements.asp
-- https://www.youtube.com/watch?v=E_tZH9R_zi8&t=1191s
-- https://www.youtube.com/watch?v=BvgbDexV1Xs&t=2414s
+Lorem Ipsum

@@ -13,15 +13,15 @@
     <body>
 
         <header>
-            <a id="home" href="">
-                <img src="images/icon.png" alt="Icon" onmouseover="hover(this);" onmouseout="unhover(this);">
+            <a id="home" href="" onmouseover="hover()" onmouseout="unhover()">
+                <img id="icon" src="images/icon.png" alt="Icon">
                 <h1>TypingPractice</h1>
             </a>
             <nav>
-                <a href="">How to play</a>
-                <a href="">How to play</a>
-                <a href="">How to play</a>
-                <a href="">How to play</a>
+                <a href="">Lorem Ipsum</a>
+                <a href="">Lorem Ipsum</a>
+                <a href="">Lorem Ipsum</a>
+                <a href="">Lorem Ipsum</a>
             </nav>
         </header>
 
@@ -56,75 +56,77 @@
                 </div>
             </div>
 
-            <div id="keyboard-box">
-                <div id="keyboard-frame">
-                    <div class="keyboard-rows">
-                        <span class="key light-theme">`</span> <!-- not working yeet -->
-                        <span class="key light-theme">1</span>
-                        <span class="key dark-theme">2</span>
-                        <span class="key light-theme">3</span>
-                        <span class="key dark-theme">4</span>
-                        <span class="key dark-theme">5</span>
-                        <span class="key light-theme">6</span>
-                        <span class="key light-theme">7</span>
-                        <span class="key dark-theme">8</span>
-                        <span class="key light-theme">9</span>
-                        <span class="key dark-theme">0</span>
-                        <span class="key dark-theme">-</span>
-                        <span class="key dark-theme">=</span>
-                        <span class="key" id="backspace">Backspace</span>
-                    </div>
-                    <div class="keyboard-rows">
-                        <span class="key" id="tab">Tab</span>
-                        <span class="key light-theme">Q</span>
-                        <span class="key dark-theme">W</span>
-                        <span class="key light-theme">E</span>
-                        <span class="key dark-theme">R</span>
-                        <span class="key dark-theme">T</span>
-                        <span class="key light-theme">Y</span>
-                        <span class="key light-theme">U</span>
-                        <span class="key dark-theme">I</span>
-                        <span class="key light-theme">O</span>
-                        <span class="key dark-theme">P</span>
-                        <span class="key dark-theme">[</span>
-                        <span class="key dark-theme">]</span>
-                        <span class="key dark-theme" id="backslash">\</span>
-                    </div>
-                    <div class="keyboard-rows">
-                        <span class="key" id="caps-lock">Caps Lock</span> <!-- Caps lock is broken lol -->
-                        <span class="key light-theme">A</span>
-                        <span class="key dark-theme">S</span>
-                        <span class="key light-theme">D</span>
-                        <span class="key dark-theme key-bumps-display">F<div class="key-bumps"></div></span>
-                        <span class="key dark-theme">G</span>
-                        <span class="key light-theme">H</span>
-                        <span class="key light-theme key-bumps-display">J<div class="key-bumps"></div></span>
-                        <span class="key dark-theme">K</span>
-                        <span class="key light-theme">L</span>
-                        <span class="key dark-theme">;</span>
-                        <span class="key dark-theme">'</span>
-                        <span class="key" id="enter">Enter</span>
-                    </div>
-                    <div class="keyboard-rows">
-                        <span class="key" id="shift-left">Shift</span>
-                        <span class="key light-theme">Z</span>
-                        <span class="key dark-theme">X</span>
-                        <span class="key light-theme">C</span>
-                        <span class="key dark-theme">V</span>
-                        <span class="key dark-theme">B</span>
-                        <span class="key light-theme">N</span>
-                        <span class="key light-theme">M</span>
-                        <span class="key dark-theme">,</span>
-                        <span class="key light-theme">.</span>
-                        <span class="key dark-theme">/</span>
-                        <span class="key" id="shift-right">Shift</span>
-                    </div>
-                    <div class="keyboard-rows">
-                        <span class="key" id="ctrl-left">Ctrl</span> <!-- not working yeet -->
-                        <span class="key" id="alt-left">Alt</span>
-                        <span class="key" id="space"></span>
-                        <span class="key" id="alt-right">Alt</span>
-                        <span class="key" id="ctrl-right">Ctrl</span> <!-- not working yeet -->
+            <div id="keyboard-area">
+                <div id="keyboard-box">
+                    <div id="keyboard-frame">
+                        <div class="keyboard-rows">
+                            <span class="key light-theme">`</span> <!-- not working yeet -->
+                            <span class="key light-theme">1</span>
+                            <span class="key dark-theme">2</span>
+                            <span class="key light-theme">3</span>
+                            <span class="key dark-theme">4</span>
+                            <span class="key dark-theme">5</span>
+                            <span class="key light-theme">6</span>
+                            <span class="key light-theme">7</span>
+                            <span class="key dark-theme">8</span>
+                            <span class="key light-theme">9</span>
+                            <span class="key dark-theme">0</span>
+                            <span class="key dark-theme">-</span>
+                            <span class="key dark-theme">=</span>
+                            <span class="key" id="backspace">Backspace</span>
+                        </div>
+                        <div class="keyboard-rows">
+                            <span class="key" id="tab">Tab</span>
+                            <span class="key light-theme">Q</span>
+                            <span class="key dark-theme">W</span>
+                            <span class="key light-theme">E</span>
+                            <span class="key dark-theme">R</span>
+                            <span class="key dark-theme">T</span>
+                            <span class="key light-theme">Y</span>
+                            <span class="key light-theme">U</span>
+                            <span class="key dark-theme">I</span>
+                            <span class="key light-theme">O</span>
+                            <span class="key dark-theme">P</span>
+                            <span class="key dark-theme">[</span>
+                            <span class="key dark-theme">]</span>
+                            <span class="key dark-theme" id="backslash">\</span>
+                        </div>
+                        <div class="keyboard-rows">
+                            <span class="key" id="caps-lock">Caps Lock</span> <!-- Caps lock is broken lol -->
+                            <span class="key light-theme">A</span>
+                            <span class="key dark-theme">S</span>
+                            <span class="key light-theme">D</span>
+                            <span class="key dark-theme key-bumps-display">F<div class="key-bumps"></div></span>
+                            <span class="key dark-theme">G</span>
+                            <span class="key light-theme">H</span>
+                            <span class="key light-theme key-bumps-display">J<div class="key-bumps"></div></span>
+                            <span class="key dark-theme">K</span>
+                            <span class="key light-theme">L</span>
+                            <span class="key dark-theme">;</span>
+                            <span class="key dark-theme">'</span>
+                            <span class="key" id="enter">Enter</span>
+                        </div>
+                        <div class="keyboard-rows">
+                            <span class="key" id="shift-left">Shift</span>
+                            <span class="key light-theme">Z</span>
+                            <span class="key dark-theme">X</span>
+                            <span class="key light-theme">C</span>
+                            <span class="key dark-theme">V</span>
+                            <span class="key dark-theme">B</span>
+                            <span class="key light-theme">N</span>
+                            <span class="key light-theme">M</span>
+                            <span class="key dark-theme">,</span>
+                            <span class="key light-theme">.</span>
+                            <span class="key dark-theme">/</span>
+                            <span class="key" id="shift-right">Shift</span>
+                        </div>
+                        <div class="keyboard-rows">
+                            <span class="key" id="ctrl-left">Ctrl</span> <!-- not working yeet -->
+                            <span class="key" id="alt-left">Alt</span>
+                            <span class="key" id="space"></span>
+                            <span class="key" id="alt-right">Alt</span>
+                            <span class="key" id="ctrl-right">Ctrl</span> <!-- not working yeet -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,11 +134,11 @@
             <footer>
                 <hr>
                 <section>
-                    <a href="">How to play</a>
-                    <a href="">How to play</a>
-                    <a href="">How to play</a>
-                    <a href="">How to play</a>
-                    <a href="">How to play</a>
+                    <a href="">Lorem Ipsum</a>
+                    <a href="">Lorem Ipsum</a>
+                    <a href="">Lorem Ipsum</a>
+                    <a href="">Lorem Ipsum</a>
+                    <a href="">Lorem Ipsum</a>
                 </section>
             </footer>
         </main>
