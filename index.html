@@ -13,15 +13,21 @@
     <body>
 
         <header>
-            <a id="home" href="" onmouseover="hover()" onmouseout="unhover()">
-                <img id="icon" src="images/icon.png" alt="Icon">
-                <h1>TypingPractice</h1>
-            </a>
             <nav>
-                <a href="">Lorem Ipsum</a>
-                <a href="">Lorem Ipsum</a>
-                <a href="">Lorem Ipsum</a>
-                <a href="">Lorem Ipsum</a>
+                <a id="home" href="" onmouseover="hover_h1()" onmouseout="unhover_h1()">
+                    <img id="icon" src="images/icon.png" alt="Icon">
+                    <h1>TypingPractice</h1>
+                </a>
+                <div id="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="nav-responsive">
+                    <a href="">About</a>
+                    <a href="">Credit</a>
+                    <a href="">How to play</a>
+                </div>
             </nav>
         </header>
 
@@ -60,7 +66,7 @@
                 <div id="keyboard-box">
                     <div id="keyboard-frame">
                         <div class="keyboard-rows">
-                            <span class="key light-theme">`</span> <!-- not working yeet -->
+                            <span class="key light-theme">`</span>
                             <span class="key light-theme">1</span>
                             <span class="key dark-theme">2</span>
                             <span class="key light-theme">3</span>
@@ -121,11 +127,11 @@
                             <span class="key" id="shift-right">Shift</span>
                         </div>
                         <div class="keyboard-rows">
-                            <span class="key" id="ctrl-left">Ctrl</span> <!-- not working yeet -->
+                            <span class="key" id="ctrl-left">Ctrl</span>
                             <span class="key" id="alt-left">Alt</span>
                             <span class="key" id="space"></span>
                             <span class="key" id="alt-right">Alt</span>
-                            <span class="key" id="ctrl-right">Ctrl</span> <!-- not working yeet -->
+                            <span class="key" id="ctrl-right">Ctrl</span>
                         </div>
                     </div>
                 </div>
@@ -134,11 +140,9 @@
             <footer>
                 <hr>
                 <section>
-                    <a href="">Lorem Ipsum</a>
-                    <a href="">Lorem Ipsum</a>
-                    <a href="">Lorem Ipsum</a>
-                    <a href="">Lorem Ipsum</a>
-                    <a href="">Lorem Ipsum</a>
+                    <a href="">Contact</a>
+                    <a href="">GitHub</a>
+                    <a href="">FAQ</a>
                 </section>
             </footer>
         </main>

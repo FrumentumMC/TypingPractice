@@ -1,10 +1,17 @@
-function hover() {
+function hover_h1() {
     document.getElementById('icon').setAttribute('src', 'images/icon_hover.png');
 }
 
-function unhover() {
+function unhover_h1() {
     document.getElementById('icon').setAttribute('src', 'images/icon.png');
 }
+
+const hamburger = document.querySelector('#hamburger-menu');
+const navMenu = document.querySelector('.nav-responsive');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('nav-active');
+})
 
 const textApiUrl = 'http://api.quotable.io/random';
 const textSection = document.getElementById('text-generator');
