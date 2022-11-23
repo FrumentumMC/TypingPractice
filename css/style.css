@@ -144,7 +144,7 @@ section a {
 #hamburger-menu {
     display: none;
     cursor: pointer;
-    padding-right: 15px;
+    padding: 11px 15px;
 }
 
 #hamburger-menu:hover div {background-color: #c4b637;}
