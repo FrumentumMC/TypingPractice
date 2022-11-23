@@ -6,26 +6,26 @@
     margin: 0;
 }
 
-html {height: 100%;}
-
 body {
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
     background: linear-gradient(#7f9e8d, #b3d6c1);
+    min-height: 100vh;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    padding: 10px;
     background-color: #181818;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-nav, #home img {margin-left: 10px;}
+nav {
+    display: flex;
+    align-items: center;
+}
 
 nav a {
+    margin: 5px;
     padding: 0 10px;
     font-size: 1.125em;
     color: #808080;
@@ -35,7 +35,7 @@ nav a {
 nav a:hover {color: #f2f2f2;}
 
 main {
-    min-height: 92vh;
+    min-height: 90vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -71,6 +71,22 @@ section a {
     padding: 20px 10px;
     color: #808080;
     text-decoration: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #f2f2f2;
+}
+
+.nav-responsive.nav-active {
+    display: grid;
+    position: absolute;
+    padding-bottom: 5px;
+    top: 50px;
+    width: 100%;
+    background-color: #181818;
 }
 
 .keyboard-rows {display: flex;}
@@ -115,23 +131,29 @@ section a {
 
 #home {
     display: flex;
-    align-items: center;
-    text-decoration: none;
     color: #f2f2f2;
 }
 
 #home img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 #home:hover {color: #c4b637;}
 
+#hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding-right: 15px;
+}
+
+#hamburger-menu:hover div {background-color: #c4b637;}
+
 #typing-area {
-    max-width: 1000px;
+    max-width: 900px;
     width: 100%;
     margin: auto;
-    padding: 20px 20px 65px 20px;
+    padding: 20px;
     background-color: #f2f2f2;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -189,7 +211,10 @@ section a {
     font-size: 1.5em;
 }
 
-#keyboard-area {width: 100%;}
+#keyboard-area {
+    padding: 20px 0;
+    width: 100%;
+}
 
 #keyboard-box {
     width: 750px;
@@ -219,3 +244,10 @@ section a {
 #shift-right {width: 142px;}
 
 #space {width: 468px;}
+
+@media (max-width: 749px) {
+    nav {justify-content: space-between;}
+    #hamburger-menu {display: block;}
+    .nav-responsive {display: none;}
+    #keyboard-area {display: none;}
+}
