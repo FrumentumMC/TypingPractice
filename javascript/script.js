@@ -13,7 +13,7 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('nav-active');
 })
 
-const textApiUrl = 'http://api.quotable.io/random';
+const textApiUrl = 'https://api.quotable.io/random';
 const textSection = document.getElementById('text-generator');
 const userInput = document.getElementById('text-input');
 let text = "";
