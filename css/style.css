@@ -62,17 +62,6 @@ footer hr {
     margin: 0;
 }
 
-section {
-    display: flex;
-    justify-content: center;
-}
-
-section a {
-    padding: 20px 10px;
-    color: #808080;
-    text-decoration: none;
-}
-
 .bar {
     width: 25px;
     height: 3px;
@@ -158,6 +147,15 @@ section a {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+#page {
+    margin-bottom: 20px;
+    padding: 20px;
+    max-width: 900px;
+    width: 100%;
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
 #performance-details {
     display: flex;
     justify-content: space-between;
@@ -200,6 +198,8 @@ section a {
     padding-top: 60px;
     text-align: center;
 }
+
+#result-details hr {margin: 10px 0;}
 
 #result-details div {
     display: flex;
@@ -244,6 +244,19 @@ section a {
 #shift-right {width: 142px;}
 
 #space {width: 468px;}
+
+#footer-section {
+    display: flex;
+    justify-content: center;
+}
+
+#footer-section a {
+    margin: 20px 10px;
+    color: #808080;
+    text-decoration: none;
+}
+
+#footer-section a:hover {color: #f2f2f2;}
 
 @media (max-width: 749px) {
     nav {justify-content: space-between;}
