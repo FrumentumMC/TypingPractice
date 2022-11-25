@@ -18,6 +18,8 @@ const getText = async () => {
 }
 getText();
 
+let userInputScore = [];
+
 userInput.addEventListener('input', () => {
     let textChars = document.querySelectorAll('.text-chars');
     textChars = Array.from(textChars);
@@ -46,8 +48,9 @@ userInput.addEventListener('input', () => {
             return element.classList.contains('success');
         })
         if (check) {
-            // getResults();
             textSection.innerHTML = '';
+            userInputScore.push(userInputChars.length);
+            console.log(userInputChars.length);
             userInput.value = '';
             getText();
         }
@@ -80,15 +83,15 @@ function resetGame() {
     document.getElementById('result-details').style.display = 'none';
 }
 
-const getResults = () => {
+const getResults = (userInputChars) => {
     clearInterval(timer);
+    userInputChars = userInput.value.split('');
+    userInputScore.push(userInputChars.length);
+    let userInputSum = userInputScore.reduce((partialSum, a) => partialSum + a, 0);
     userInput.value = '';
     userInput.disabled = true;
     userInput.style.backgroundColor = '#ffffff';
-    // wpm
-    let timeTaken = 1;
-    document.getElementById('wpm').innerText = (userInput.value.length  - mistakes / 5 / timeTaken);
-    document.getElementById('accuracy').innerText = Math.round(((userInput.value.length - mistakes) / userInput.value.length) * 100) + '%';
-    // accuracy
+    document.getElementById('wpm').innerText = (userInputSum / 5 / 1);
+    document.getElementById('accuracy').innerText = Math.round(((userInputSum - mistakes) / userInputSum) * 100) + '%';
     document.getElementById('result-details').style.display = 'block';
 }
