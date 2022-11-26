@@ -1,11 +1,12 @@
 const textApiUrl = 'https://api.quotable.io/random';
-const textSection = document.getElementById('text-generator');
+const textGenerator = document.getElementById('text-generator');
 const userInput = document.getElementById('text-input');
-const textarea = userInput;
-let text = "";
-let seconds = 1000 * 60;
-let timer;
+userInput.addEventListener('keypress', startTimer);
+let displayTime = document.getElementById('timer');
+let seconds = 60000;
 let mistakes = 0;
+let userInputScore = [];
+displayTime.innerHTML='1:00';
 
 const getText = async () => {
     const response = await fetch(textApiUrl);
@@ -14,11 +15,9 @@ const getText = async () => {
     let textArray = text.split('').map((value) => {
         return '<span class="text-chars">' + value + '</span>';
     })
-    textSection.innerHTML += textArray.join('');
+    textGenerator.innerHTML += textArray.join('');
 }
 getText();
-
-let userInputScore = [];
 
 userInput.addEventListener('input', () => {
     let textChars = document.querySelectorAll('.text-chars');
@@ -48,50 +47,61 @@ userInput.addEventListener('input', () => {
             return element.classList.contains('success');
         })
         if (check) {
-            textSection.innerHTML = '';
-            userInputScore.push(userInputChars.length);
-            console.log(userInputChars.length);
+            textGenerator.innerHTML = '';
+            addUserInputToScore();
             userInput.value = '';
             getText();
         }
     })
 })
 
-textarea.addEventListener('keypress', startTimer);
-
 function startTimer() {
-    textarea.removeEventListener('keypress', startTimer);
+    userInput.removeEventListener('keypress', startTimer);
     if (seconds == 60000)
     timer = setInterval(startTimer, 1000);
     seconds -= 1000;
-    document.getElementById('timer').innerHTML = '0:' + seconds/1000;
+    displayTime.innerHTML = '0:' + seconds/1000;
     if (seconds <= 9000) {
-        document.getElementById('timer').innerHTML = '0:0' + seconds/1000;
+        displayTime.innerHTML = '0:0' + seconds/1000;
     }
     if (seconds <= 0) {
         getResults();
    }
 }
-document.getElementById('timer').innerHTML='1:00';
+
+function resetTimer() {
+    clearInterval(timer);
+    seconds = 60000;
+    displayTime.innerHTML='1:00';
+    userInput.addEventListener('keypress', startTimer);
+}
+
+function addUserInputToScore() {
+    userInputChars = userInput.value.split('');
+    userInputScore.push(userInputChars.length);
+}
 
 function resetGame() {
-    textSection.innerHTML = '';
+    textGenerator.innerHTML = '';
     userInput.value = '';
     userInput.disabled = false;
+    userInput.style.backgroundColor = '#ffffff';
     getText();
-    // stop timer
+    resetTimer();
+    mistakes = 0;
+    userInputScore = [];
+    document.getElementById('mistakes').innerText = mistakes;
     document.getElementById('result-details').style.display = 'none';
 }
 
-const getResults = (userInputChars) => {
+const getResults = (userInputSum) => {
     clearInterval(timer);
-    userInputChars = userInput.value.split('');
-    userInputScore.push(userInputChars.length);
-    let userInputSum = userInputScore.reduce((partialSum, a) => partialSum + a, 0);
     userInput.value = '';
     userInput.disabled = true;
     userInput.style.backgroundColor = '#ffffff';
-    document.getElementById('wpm').innerText = (userInputSum / 5 / 1);
+    addUserInputToScore();
+    userInputSum = userInputScore.reduce((partialSum, a) => partialSum + a, 0);
+    document.getElementById('wpm').innerText = (userInputSum / 4.7).toFixed(0);
     document.getElementById('accuracy').innerText = Math.round(((userInputSum - mistakes) / userInputSum) * 100) + '%';
     document.getElementById('result-details').style.display = 'block';
 }
