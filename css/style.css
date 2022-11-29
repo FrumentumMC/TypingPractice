@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 
 * {
@@ -9,9 +10,9 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: "Poppins", sans-serif;
     background: linear-gradient(#7f9e8d, #b3d6c1);
     min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
 }
 
 header {
@@ -163,8 +164,6 @@ footer hr {
 
 #performance-details p {margin: 0;}
 
-#performance-details span {font-weight: bold;}
-
 #text-box {
     padding: 10px;
     margin-top: 10px;
@@ -173,25 +172,29 @@ footer hr {
 }
 
 #text-generator {
-    font-size: 1.5em;
+    font-size: 1.25em;
     color: #808080;
     padding-bottom: 10px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 #retry {
     margin-top: 10px;
     float: right;
     border: none;
-    font-size: 1.125em;
+    border-radius: 5px;
+    font-size: 1.25em;
     padding: 7.5px 15px;
     color: #f2f2f2;
-    background-color: #5cda8e;
+    background-color: #77c998;
 }
 
 #retry svg {
     fill: #f2f2f2;
     width: 15px;
 }
+
+#retry:hover {background-color: #46dd83;}
 
 #result-details {
     display: none;
@@ -214,6 +217,7 @@ footer hr {
 #keyboard-area {
     padding: 20px 0;
     width: 100%;
+    font-family: 'Lato', sans-serif;
 }
 
 #keyboard-box {
@@ -223,7 +227,6 @@ footer hr {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 3%;
     background-color: #252525;
-    font-family: "Lato", sans-serif;
 }
 
 #keyboard-frame {
