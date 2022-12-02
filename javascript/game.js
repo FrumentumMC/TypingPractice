@@ -94,14 +94,19 @@ function resetGame() {
     document.getElementById('result-details').style.display = 'none';
 }
 
-const getResults = (userInputSum) => {
+function calculateResults(userInputSum) {
+    userInputSum = userInputScore.reduce((partialSum, a) => partialSum + a, 0);
+    document.getElementById('wpm').innerText = (userInputSum / 5).toFixed(0);
+    document.getElementById('accuracy').innerText = Math.round(((userInputSum - mistakes) / userInputSum) * 100) + '%';
+    document.getElementById('score').innerText = ((userInputSum / 5) * (((userInputSum - mistakes) / userInputSum) * 100) / 100).toFixed(0) + ' awpm';
+}
+
+const getResults = () => {
     clearInterval(timer);
     userInput.value = '';
     userInput.disabled = true;
     userInput.style.backgroundColor = '#ffffff';
     addUserInputToScore();
-    userInputSum = userInputScore.reduce((partialSum, a) => partialSum + a, 0);
-    document.getElementById('wpm').innerText = (userInputSum / 4.7).toFixed(0);
-    document.getElementById('accuracy').innerText = Math.round(((userInputSum - mistakes) / userInputSum) * 100) + '%';
+    calculateResults();
     document.getElementById('result-details').style.display = 'block';
 }
