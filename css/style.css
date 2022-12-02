@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 * {
     box-sizing: border-box;
@@ -10,7 +11,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(#7f9e8d, #b3d6c1);
+    background: linear-gradient(#a7c9b4, #93b8a3);
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
@@ -43,6 +44,18 @@ main {
     flex-flow: row wrap;
     align-content: space-between;
 }
+
+aside {
+    height: 500px;
+    max-width: 300px;
+    width: 100%;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #d9fbff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+aside a {text-decoration: none;}
 
 time {font-weight: bold;}
 
@@ -139,8 +152,17 @@ footer hr {
 
 #hamburger-menu:hover div {background-color: #c4b637;}
 
-#typing-area {
+#welcome {background-color: #fff27b;}
+
+#practice-area {
+    min-height: 50vh;
     max-width: 900px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+}
+
+#typing-area {
     width: 100%;
     margin: auto;
     padding: 20px;
@@ -174,7 +196,7 @@ footer hr {
     justify-content: space-between;
 }
 
-#performance-details p {margin: 0;}
+#performance-details p {padding: 0;}
 
 #text-box {
     padding: 10px;
@@ -260,6 +282,11 @@ footer hr {
 
 #space {width: 468px;}
 
+#welcome-fixed {
+    display: none;
+    background-color: #fff27b;
+}
+
 #footer-section {
     display: flex;
     justify-content: center;
@@ -278,4 +305,9 @@ footer hr {
     #hamburger-menu {display: block;}
     .nav-responsive {display: none;}
     #keyboard-area {display: none;}
+}
+
+@media (max-width: 1580px) {
+    #welcome {display: none;}
+    #welcome-fixed {display: block;}
 }

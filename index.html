@@ -6,8 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TypingPractice</title>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-        <link rel="icon" type="image/x-icon" href="images/favicon.png">
+        <link rel="icon" type="image/x-icon" href="media/favicon.png">
     </head>
 
     <body>
@@ -15,7 +14,7 @@
         <header>
             <nav>
                 <a id="home" href="index.html" onmouseover="hover_h1()" onmouseout="unhover_h1()">
-                    <img id="icon" src="images/icon.png" alt="Icon">
+                    <img id="icon" src="media/icon.png" alt="Icon">
                     <h1>TypingPractice</h1>
                 </a>
                 <div id="hamburger-menu">
@@ -32,109 +31,129 @@
         </header>
 
         <main>
-            <div id="typing-area">
-                <div id="performance-details">
-                    <p>Mistakes: <strong><span id="mistakes">0</span></strong></p>
-                    <time id="timer"></time>
-                </div>
-                <div id="text-box">
-                    <p id="text-generator"></p>
-                    <textarea id="text-input" rows="3" placeholder="Start typing here..."></textarea>
-                </div>
-                <button id="retry" onclick="resetGame()">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
-                        <path d="M370.72 133.28C339.458 104.008 298.888 87.962 255.848 88c-77.458.068-144.328 53.178-162.791 126.85-1.344 5.363-6.122 9.15-11.651 9.15H24.103c-7.498 0-13.194-6.807-11.807-14.176C33.933 94.924 134.813 8 256 8c66.448 0 126.791 26.136 171.315 68.685L463.03 40.97C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.749zM32 296h134.059c21.382 0 32.09 25.851 16.971 40.971l-41.75 41.75c31.262 29.273 71.835 45.319 114.876 45.28 77.418-.07 144.315-53.144 162.787-126.849 1.344-5.363 6.122-9.15 11.651-9.15h57.304c7.498 0 13.194 6.807 11.807 14.176C478.067 417.076 377.187 504 256 504c-66.448 0-126.791-26.136-171.315-68.685L48.97 471.03C33.851 486.149 8 475.441 8 454.059V320c0-13.255 10.745-24 24-24z"/>
-                    </svg>
-                    Retry
-                </button>
-                <div id="result-details">
-                    <h2>Result</h2>
-                    <hr>
-                    <div>
-                        <p>Accuracy: <span id="accuracy"></span></p>
-                        <p>WPM: <span id="wpm"></span></p>
-                    </div>
-                    <div>
-                        <p>Score: <span id="score"></span></p>
-                    </div>
-                </div>
-            </div>
+            <aside id="welcome">
+                <h2>Welcome to TypingPractice!</h2>
+                <p>TypingPractice is an online browser-based typing test developed by FrumentumMC on GitHub using HTML, CSS and JavaScript. It was first launched on December 8, 2022 using GitHub Pages which makes it open source. TypingPractice is a practical test that measures your typing speed and accuracy based on your performance...</p>
+                <a href="about.html">Read more</a>
+            </aside>
 
-            <div id="keyboard-area">
-                <div id="keyboard-box">
-                    <div id="keyboard-frame">
-                        <div class="keyboard-rows">
-                            <span class="key light-theme">`</span>
-                            <span class="key light-theme">1</span>
-                            <span class="key dark-theme">2</span>
-                            <span class="key light-theme">3</span>
-                            <span class="key dark-theme">4</span>
-                            <span class="key dark-theme">5</span>
-                            <span class="key light-theme">6</span>
-                            <span class="key light-theme">7</span>
-                            <span class="key dark-theme">8</span>
-                            <span class="key light-theme">9</span>
-                            <span class="key dark-theme">0</span>
-                            <span class="key dark-theme">-</span>
-                            <span class="key dark-theme">=</span>
-                            <span class="key" id="backspace">Backspace</span>
+            <section id="practice-area">
+                <div id="typing-area">
+                    <div id="performance-details">
+                        <p>Mistakes: <strong><span id="mistakes">0</span></strong></p>
+                        <time id="timer"></time>
+                    </div>
+                    <div id="text-box">
+                        <p id="text-generator"></p>
+                        <textarea id="text-input" rows="3" placeholder="Start typing here..."></textarea>
+                    </div>
+                    <button id="retry" onclick="resetGame()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+                            <path d="M370.72 133.28C339.458 104.008 298.888 87.962 255.848 88c-77.458.068-144.328 53.178-162.791 126.85-1.344 5.363-6.122 9.15-11.651 9.15H24.103c-7.498 0-13.194-6.807-11.807-14.176C33.933 94.924 134.813 8 256 8c66.448 0 126.791 26.136 171.315 68.685L463.03 40.97C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.749zM32 296h134.059c21.382 0 32.09 25.851 16.971 40.971l-41.75 41.75c31.262 29.273 71.835 45.319 114.876 45.28 77.418-.07 144.315-53.144 162.787-126.849 1.344-5.363 6.122-9.15 11.651-9.15h57.304c7.498 0 13.194 6.807 11.807 14.176C478.067 417.076 377.187 504 256 504c-66.448 0-126.791-26.136-171.315-68.685L48.97 471.03C33.851 486.149 8 475.441 8 454.059V320c0-13.255 10.745-24 24-24z"/>
+                        </svg>
+                        Retry
+                    </button>
+                    <div id="result-details">
+                        <h2>Result</h2>
+                        <hr>
+                        <div>
+                            <p>Accuracy: <span id="accuracy"></span></p>
+                            <p>WPM: <span id="wpm"></span></p>
                         </div>
-                        <div class="keyboard-rows">
-                            <span class="key" id="tab">Tab</span>
-                            <span class="key light-theme">Q</span>
-                            <span class="key dark-theme">W</span>
-                            <span class="key light-theme">E</span>
-                            <span class="key dark-theme">R</span>
-                            <span class="key dark-theme">T</span>
-                            <span class="key light-theme">Y</span>
-                            <span class="key light-theme">U</span>
-                            <span class="key dark-theme">I</span>
-                            <span class="key light-theme">O</span>
-                            <span class="key dark-theme">P</span>
-                            <span class="key dark-theme">[</span>
-                            <span class="key dark-theme">]</span>
-                            <span class="key dark-theme" id="backslash">\</span>
-                        </div>
-                        <div class="keyboard-rows">
-                            <span class="key" id="caps-lock">CapsLock</span>
-                            <span class="key light-theme">A</span>
-                            <span class="key dark-theme">S</span>
-                            <span class="key light-theme">D</span>
-                            <span class="key dark-theme key-bumps-display">F<div class="key-bumps"></div></span>
-                            <span class="key dark-theme">G</span>
-                            <span class="key light-theme">H</span>
-                            <span class="key light-theme key-bumps-display">J<div class="key-bumps"></div></span>
-                            <span class="key dark-theme">K</span>
-                            <span class="key light-theme">L</span>
-                            <span class="key dark-theme">;</span>
-                            <span class="key dark-theme">'</span>
-                            <span class="key" id="enter">Enter</span>
-                        </div>
-                        <div class="keyboard-rows">
-                            <span class="key" id="shift-left">Shift</span>
-                            <span class="key light-theme">Z</span>
-                            <span class="key dark-theme">X</span>
-                            <span class="key light-theme">C</span>
-                            <span class="key dark-theme">V</span>
-                            <span class="key dark-theme">B</span>
-                            <span class="key light-theme">N</span>
-                            <span class="key light-theme">M</span>
-                            <span class="key dark-theme">,</span>
-                            <span class="key light-theme">.</span>
-                            <span class="key dark-theme">/</span>
-                            <span class="key" id="shift-right">Shift</span>
-                        </div>
-                        <div class="keyboard-rows">
-                            <span class="key" id="ctrl-left">Ctrl</span>
-                            <span class="key" id="alt-left">Alt</span>
-                            <span class="key" id="space"></span>
-                            <span class="key" id="alt-right">Alt</span>
-                            <span class="key" id="ctrl-right">Ctrl</span>
+                        <div>
+                            <p>Score: <span id="score"></span></p>
                         </div>
                     </div>
                 </div>
-            </div>
+    
+                <div id="keyboard-area">
+                    <div id="keyboard-box">
+                        <div id="keyboard-frame">
+                            <div class="keyboard-rows">
+                                <span class="key light-theme">`</span>
+                                <span class="key light-theme">1</span>
+                                <span class="key dark-theme">2</span>
+                                <span class="key light-theme">3</span>
+                                <span class="key dark-theme">4</span>
+                                <span class="key dark-theme">5</span>
+                                <span class="key light-theme">6</span>
+                                <span class="key light-theme">7</span>
+                                <span class="key dark-theme">8</span>
+                                <span class="key light-theme">9</span>
+                                <span class="key dark-theme">0</span>
+                                <span class="key dark-theme">-</span>
+                                <span class="key dark-theme">=</span>
+                                <span class="key" id="backspace">Backspace</span>
+                            </div>
+                            <div class="keyboard-rows">
+                                <span class="key" id="tab">Tab</span>
+                                <span class="key light-theme">Q</span>
+                                <span class="key dark-theme">W</span>
+                                <span class="key light-theme">E</span>
+                                <span class="key dark-theme">R</span>
+                                <span class="key dark-theme">T</span>
+                                <span class="key light-theme">Y</span>
+                                <span class="key light-theme">U</span>
+                                <span class="key dark-theme">I</span>
+                                <span class="key light-theme">O</span>
+                                <span class="key dark-theme">P</span>
+                                <span class="key dark-theme">[</span>
+                                <span class="key dark-theme">]</span>
+                                <span class="key dark-theme" id="backslash">\</span>
+                            </div>
+                            <div class="keyboard-rows">
+                                <span class="key" id="caps-lock">CapsLock</span>
+                                <span class="key light-theme">A</span>
+                                <span class="key dark-theme">S</span>
+                                <span class="key light-theme">D</span>
+                                <span class="key dark-theme key-bumps-display">F<div class="key-bumps"></div></span>
+                                <span class="key dark-theme">G</span>
+                                <span class="key light-theme">H</span>
+                                <span class="key light-theme key-bumps-display">J<div class="key-bumps"></div></span>
+                                <span class="key dark-theme">K</span>
+                                <span class="key light-theme">L</span>
+                                <span class="key dark-theme">;</span>
+                                <span class="key dark-theme">'</span>
+                                <span class="key" id="enter">Enter</span>
+                            </div>
+                            <div class="keyboard-rows">
+                                <span class="key" id="shift-left">Shift</span>
+                                <span class="key light-theme">Z</span>
+                                <span class="key dark-theme">X</span>
+                                <span class="key light-theme">C</span>
+                                <span class="key dark-theme">V</span>
+                                <span class="key dark-theme">B</span>
+                                <span class="key light-theme">N</span>
+                                <span class="key light-theme">M</span>
+                                <span class="key dark-theme">,</span>
+                                <span class="key light-theme">.</span>
+                                <span class="key dark-theme">/</span>
+                                <span class="key" id="shift-right">Shift</span>
+                            </div>
+                            <div class="keyboard-rows">
+                                <span class="key" id="ctrl-left">Ctrl</span>
+                                <span class="key" id="alt-left">Alt</span>
+                                <span class="key" id="space"></span>
+                                <span class="key" id="alt-right">Alt</span>
+                                <span class="key" id="ctrl-right">Ctrl</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside id="welcome-fixed">
+                <h2>Welcome to TypingPractice!</h2>
+                <p>TypingPractice is an online browser-based typing test developed by FrumentumMC on GitHub using HTML, CSS and JavaScript. It was first launched on December 8, 2022 using GitHub Pages which makes it open source. TypingPractice is a practical test that measures your typing speed and accuracy based on your performance...</p>
+                <a href="about.html">Read more</a>
+            </aside>
+
+            <aside>
+                <h2>How to play</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur dolorum sed totam amet repellendus ullam laudantium accusamus nobis nulla consequuntur necessitatibus suscipit, doloremque adipisci quos optio tenetur? Ratione, beatae accusamus.</p>
+                <a href="howtoplay.html">Read more</a>
+            </aside>
 
             <footer>
                 <hr>
