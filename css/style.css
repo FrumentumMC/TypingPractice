@@ -52,7 +52,6 @@ aside {
     margin: 60px auto;
     position: relative;
     padding: 20px;
-    background-color: #d9fbff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -62,22 +61,6 @@ aside:before, aside:after {
     position: absolute;
     width: 100%;
     z-index: -1;
-}
-
-aside:before {
-    background: #cdeef1;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    left: -5px;
-    top: 4px;
-    transform: rotate(-2.5deg);
-}
-
-aside:after {
-    background: #d0f1f5;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-    right: -3px;
-    top: 1px;
-    transform: rotate(1.4deg);
 }
 
 aside a {text-decoration: none;}
@@ -329,10 +312,27 @@ footer hr {
 
 #space {width: 468px;}
 
-#welcome-fixed {
-    display: none;
-    background-color: #fff27b;
+#howtoplay {background-color: #d9fbff;}
+
+#howtoplay:before {
+    background: #cdeef1;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2.5deg);
 }
+
+#howtoplay:after {
+    background: #d0f1f5;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.4deg);
+}
+
+#aside-fixed {display: none;}
+
+#welcome-fixed {background-color: #fff27b;}
 
 #welcome-fixed:before {
     background: #eee171;
@@ -344,6 +344,24 @@ footer hr {
 
 #welcome-fixed:after {
     background: #f3e675;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.4deg);
+}
+
+#howtoplay-fixed {background-color: #d9fbff;}
+
+#howtoplay-fixed:before {
+    background: #cdeef1;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2.5deg);
+}
+
+#howtoplay-fixed:after {
+    background: #d0f1f5;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     right: -3px;
     top: 1px;
@@ -363,6 +381,15 @@ footer hr {
 
 #footer-section a:hover {color: #f2f2f2;}
 
+@media (max-width: 1580px) {
+    #aside-fixed {
+        display: flex;
+        width: 100%;
+    }
+    #welcome {display: none;}
+    #howtoplay {display: none;}
+}
+
 @media (max-width: 749px) {
     nav {justify-content: space-between;}
     #hamburger-menu {display: block;}
@@ -370,7 +397,6 @@ footer hr {
     #keyboard-area {display: none;}
 }
 
-@media (max-width: 1580px) {
-    #welcome {display: none;}
-    #welcome-fixed {display: block;}
+@media (max-width: 670px) {
+    #aside-fixed {display: block;}
 }
