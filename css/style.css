@@ -50,9 +50,34 @@ aside {
     max-width: 300px;
     width: 100%;
     margin: 60px auto;
+    position: relative;
     padding: 20px;
     background-color: #d9fbff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+aside:before, aside:after {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+aside:before {
+    background: #cdeef1;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2.5deg);
+}
+
+aside:after {
+    background: #d0f1f5;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.4deg);
 }
 
 aside a {text-decoration: none;}
@@ -90,6 +115,12 @@ footer hr {
     top: 50px;
     width: 100%;
     background-color: #181818;
+}
+
+.strong-link {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .keyboard-rows {display: flex;}
@@ -153,6 +184,22 @@ footer hr {
 #hamburger-menu:hover div {background-color: #c4b637;}
 
 #welcome {background-color: #fff27b;}
+
+#welcome:before {
+    background: #eee171;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2.5deg);
+}
+
+#welcome:after {
+    background: #f3e675;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.4deg);
+}
 
 #practice-area {
     min-height: 50vh;
@@ -285,6 +332,22 @@ footer hr {
 #welcome-fixed {
     display: none;
     background-color: #fff27b;
+}
+
+#welcome-fixed:before {
+    background: #eee171;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2.5deg);
+}
+
+#welcome-fixed:after {
+    background: #f3e675;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.4deg);
 }
 
 #footer-section {
