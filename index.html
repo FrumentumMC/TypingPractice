@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TypingPractice</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="icon" type="image/x-icon" href="media/favicon.png">
     </head>
 
@@ -26,6 +26,12 @@
                     <a href="about.html">About</a>
                     <a href="credit.html">Credit</a>
                     <a href="howtoplay.html">How to play</a>
+                    <span id="dropdown">
+                        <button class="dropbtn" onclick="languageDropdown()">Language</button>
+                        <div class="dropdown-content" id="dropdown-id">
+                            <span id="google_translate_element"></span>
+                        </div>
+                    </span>
                 </div>
             </nav>
         </header>
@@ -171,9 +177,10 @@
             </footer>
         </main>
 
-        <script src="javascript/script.js"></script>
-        <script src="javascript/game.js"></script>
-        <script src="javascript/keyboard.js"></script>
+        <script type="text/javascript" src="javascript/script.js"></script>
+        <script type="text/javascript" src="javascript/game.js"></script>
+        <script type="text/javascript" src="javascript/keyboard.js"></script>
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </body>
 
 </html>

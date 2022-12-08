@@ -12,6 +12,8 @@ body {
     padding: 0;
     margin: 0;
     background: linear-gradient(#a7c9b4, #93b8a3);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
@@ -34,7 +36,7 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {color: #f2f2f2;}
+nav a:hover, .dropbtn:hover {color: #f2f2f2;}
 
 main {
     min-height: 90vh;
@@ -99,6 +101,23 @@ footer hr {
     width: 100%;
     background-color: #181818;
 }
+
+.dropbtn {
+    border: none;
+    margin: 5px;
+    padding: 0 10px;
+    font-size: 1.125em;
+    font-family: 'Poppins', sans-serif;
+    color: #808080;
+    background-color: #181818;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+}
+
+.show-dropdown {display: block;}
 
 .strong-link {
     color: #000000;
@@ -165,6 +184,11 @@ footer hr {
 }
 
 #hamburger-menu:hover div {background-color: #c4b637;}
+
+#dropdown {
+    position: relative;
+    display: inline-block;
+}
 
 #welcome {background-color: #fff27b;}
 
