@@ -1,9 +1,9 @@
 function hover_h1() {
-    document.getElementById('icon').setAttribute('src', 'media/icon_hover.png');
+    document.getElementById('icon').setAttribute('src', 'https://frumentummc.github.io/TypingPractice/media/icon_hover.png');
 }
 
 function unhover_h1() {
-    document.getElementById('icon').setAttribute('src', 'media/icon.png');
+    document.getElementById('icon').setAttribute('src', 'https://frumentummc.github.io/TypingPractice/media/icon.png');
 }
 
 const hamburger = document.querySelector('#hamburger-menu');

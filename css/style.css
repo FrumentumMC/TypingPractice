@@ -233,16 +233,16 @@ footer hr {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-#page h2, p {
-    padding: 20px 0;
-}
+#page h2, p {padding: 20px 0;}
 
-#page hr {
-    margin: 20px 0;
-}
+#page hr {margin: 20px 0;}
 
-#page h3 {
-    padding: 10px 0;
+#page h3 {padding: 10px 0;}
+
+#page img {
+    margin-top: 5px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #performance-details {
